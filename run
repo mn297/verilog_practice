@@ -1,0 +1,9 @@
+if [ $1 == "hello" ];
+    then
+    iverilog -o hello hello.v
+    vvp hello;
+elif [ $1 == "counter" ]
+    then
+    iverilog -o counter -c file_list.txt
+    vvp counter;
+fi
